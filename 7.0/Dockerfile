@@ -7,5 +7,6 @@ RUN apt-get update \
     && pecl install -o -f apcu \
     && rm -rf /tmp/pear \
     && echo "extension=apcu.so" > /usr/local/etc/php/conf.d/apcu.ini \
+    && curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer
 COPY ./php.ini /usr/local/etc/php/
