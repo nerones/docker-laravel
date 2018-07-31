@@ -1,4 +1,4 @@
-FROM php:7.0.11-apache
+FROM php:7.2.8-apache-stretch
 RUN apt-get update \
     && apt-get install -y libcurl4-gnutls-dev libpng12-dev libpq-dev libmcrypt-dev --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
